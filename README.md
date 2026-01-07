@@ -9,7 +9,7 @@
 ## 🔗 Live Demo
 
 Try the live version here:  
-🌐 **https://e-commerce-omega-ten-40.vercel.app/** :contentReference[oaicite:1]{index=1}
+🌐 **https://e-commerce-s1dc.vercel.app/** :contentReference[oaicite:1]{index=1}
 
 ---
 
