@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>eStore: HomePage</title>
+    <link rel="stylesheet" type="text/css " href="style.css" />
+    <script>
+        function validate() {
+            let first_name = document.getElementById("first_name").value;
+            if (first_name == "") {
+                document.getElementById("first_name_error").innerText = "**Please enter first name";
+                return false;
+            }
+        
+            let last_name = document.getElementById("last_name").value;
+            if (last_name == "") {
+                document.getElementById("last_name_error").innerText = "**Please enter last name";
+                return false;
+            }
+         
+       
+            let email = document.getElementById("email").value;
+            if (email == "") {
+                document.getElementById("email_error").innerText = "**Please enter email";
+                return false;
+            }
+            // let email=document.getElementById("email").value;
+          
+            let emailPattern = /^[a-zaA-Z0-9.%_+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("email_error").innerText = "**Please enter a valid email address";
+                return false;
+            }   
+
+       
+            let password = document.getElementById("password").value;
+            if (password == "") {
+                document.getElementById("password_error").innerText = "**Please enter password";
+                return false;
+            }
+            if (password.length < 6) {
+                document.getElementById("password_error").innerText = "**Password must be 6 character";
+                return false;
+            }
+
+        
+            let termSelected = document.querySelector('input[name="term"]:checked');
+            if (!termSelected || termSelected.value != "1") {
+                document.getElementById("term_error").innerText = "**You must accept the terms and conditions";
+                return false;
+            }
+            return true;
+
+
+        }
+    </script>
+
+    <style>
+        .validation_error {
+            color: red;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="images/logo.png" title="eStore" />
+        </div>
+        <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html"> Contact</a>
+            <a href="products.html">Products</a>
+        </div>
+        <div id="login_reg_panel">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+
+        </div>
+    </div>
+    <div class="container">
+        <div id="register_form">
+            <form action="register_process.php" method="post" onsubmit="return validate()">
+                <div>
+                    <label>Firstname</label>
+                    <input type="text" name="first_name" id="first_name" />
+                    <span class="validation_error" id="first_name_error"></span>
+                </div>
+                <div>
+                    <label>Lastname</label>
+                    <input type="text" name="last_name" id="last_name" />
+                    <span class="validation_error" id="last_name_error"></span>
+
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" name="email" id="email" />
+                    <span class="validation_error" id="email_error"></span>
+
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" name="password" id="password" />
+                    <span class="validation_error" id="password_error"></span>
+
+                </div>
+                <div>
+                    <p>Do you accept terms and conditions?
+                        <input type="radio" name="term" value="1" /><label>Yes</label>
+                        <input type="radio" name="term" value="0" /><label>No</label>
+                        <span class="validation_error" id="term_error"></span>
+                </div>
+                <div>
+                    <input type="submit" value="Register now" id="Register_btn" />
+                </div>
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>

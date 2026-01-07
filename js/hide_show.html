@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide&show</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin-top: 20px;
+        }
+        </style>
+        <script>
+            // function hide_box(){
+            //     document.getElementById("box").style.display="none";
+            // }
+            // function show_box(){
+            //     document.getElementById("box").style.display="block";
+            // }
+            function show_btn(){
+                let box= document.getElementById("box");
+                let btn= document.getElementById("show_hide_btn");
+                if(box.style.display==="none"){
+                    box.style.display="block";
+                    btn.innerText="Hide btn";
+                }else{
+                    box.style.display="none";
+                    btn.innerText="Show btn";   
+            }
+        }
+        </script>
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+<!-- <button id ="hide" onclick="hide_box()">Hide</button>
+<button id ="show" onclick="show_box()">Show</button> -->
+<button id="show_hide_btn" onclick="show_btn()">Hide/show btn</button>
+<!-- to make green when the curosr move on box -->
+ <button onmouseover="document.getElementById('box').style.backgroundColor='lightgreen'"></button>
+</body>
+</html>

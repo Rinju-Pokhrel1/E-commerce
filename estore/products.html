@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> eStore: Homepage </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div id="header">
+
+        <img id="logo" src="images/OIP.png" title="eStore" />
+
+        <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="product.html">Product</a>
+        </div>
+       <div class="cart" onclick="toggleCart()">
+    <img src="images/cart.png" alt="shopping cart" id="cartIcon">
+
+  
+</div>
+
+        <div id="login_reg_panel">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" style="display: none; position: fixed; top: 60px; right: 10px; background: white; border: 1px solid #ccc; padding: 10px; z-index: 1000;">
+        <h1>Your Cart</h1>
+        <div class="cart-container">
+            <!-- Cart Item -->
+            <div class="cart-item">
+                <img src="images/iphone1.jpg" alt="iphone" class="cart-img">
+                <div class="cart-details">
+                    <h3>iPhone</h3>
+                    <p>Price: $123</p>
+                    <label>
+                        Quantity:
+                        <input type="number" value="1" min="1">
+                    </label>
+                    <p>Subtotal: $123</p>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <hr>
+            <!-- Order Summary -->
+            <div class="cart-summary">
+                <p>Subtotal: $123</p>
+                <p>Tax: $10</p>
+                <p><strong>Total: $133</strong></p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <h1>Product</h1>
+    <div class="container">
+        <div class="product_container">
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+            <div class="product">
+                <img src="images/iphone1.jpg" alt="iphone" class="productImg">
+                <span class="price">$123</span>
+                <p>description goes here</p>
+                <input type="button" value="Add to cart" class="add_to_cart_btn">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+function toggleCart() {
+    var modal = document.getElementById('cartModal');
+    if (modal.style.display === 'none' || modal.style.display === '') {
+        modal.style.display = 'block';
+    } else {
+        modal.style.display = 'none';
+    }
+}
+</script>
+
+</html>

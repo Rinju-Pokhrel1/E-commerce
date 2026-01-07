@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eStore : Cart</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div id="header">
+
+        <img id="logo" src="images/OIP.png" title="eStore" />
+
+        <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="product.html">Product</a>
+        </div>
+
+        <div class="cart">
+            <a href="cart.html">
+                <img src="images/cart.png" alt="shopping cart" id="cartIcon">
+            </a>
+        </div>
+
+        <div id="login_reg_panel">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+
+    </div>
+
+
+    <h1>Your Cart</h1>
+
+    <div class="cart-container">
+
+        
+        <div class="cart-item">
+            <img src="images/iphone1.jpg" alt="iphone" class="cart-img">
+
+            <div class="cart-details">
+                <h3>iPhone</h3>
+                <p>Price: $123</p>
+
+                <label>
+                    Quantity:
+                    <input type="number" value="1" min="1">
+                </label>
+
+                <p>Subtotal: $123</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+
+        <hr>
+
+     
+        <div class="cart-summary">
+            <p>Subtotal: $123</p>
+            <p>Tax: $10</p>
+            <p><strong>Total: $133</strong></p>
+
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

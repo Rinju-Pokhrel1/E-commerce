@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>JavaScript basic</title>
+    <script type="text/JavaScript">
+        // alert("hello");
+    //   document.writeln("hello");
+        // console.log("hello");
+        function greet () {
+           let firstName=document.getElementById("first_name").value;
+           let lastName=document.getElementById("last_name").value;
+           let msg = firstName +" "+ lastName;
+           document.getElementById("display_box").innerText=msg;
+        
+        }
+    
+   
+    </script>
+
+   
+</head>
+
+<body><form action="#">
+    <input type ="text" id="first_name" name ="first_name"/>
+    <input type ="text" id="last_name" name ="last_name"/>
+ <input type="button" value="greet me" onclick="greet()"/></form>
+<span id="display_box"></span>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eStore: HomePage</title>
+    <link rel="stylesheet" type="text/css " href="style.css" />
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="images/logo.png" title="eStore" />
+        </div>
+        <div id="navbar">
+            <a href="index.html">Index</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html"> Contact</a>
+
+        </div>
+        <div id="login_reg_panel">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+
+        </div>
+        <div class="container">
+            <div id="login_form">
+                <form action="login_process.php" method="post">
+                    <div>
+                        <label><b>Username</b></label>
+                        <input type="text" id="username" name="username" />
+                    </div>
+                    <div>
+                        <label><b>Password</b></label>
+                        <input type="password" id="password" name="password" />
+                    </div>
+                    <div>
+
+                        <input type="submit" id="login_btn" value="Login" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
