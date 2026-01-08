@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>class and object</title>
+</head>
+
+<body>
+    <script>
+        //    var person ={
+        //     full_name:"Rinju Pokhrel",
+        //     address:"ktm",
+        //     phone:96546,
+        //     displayDetail:function(){
+        //         return this.full_name + " "+ this.address+" "+ this.phone;
+
+
+        //     },
+        //     setDetails:function(fname,add,phone){
+        //         this.full_name=fname;
+        //         this.phone =phone;
+        //         this.address=add;
+
+
+        //     }
+        //    } 
+
+        //     person.setDetails("saloni","jnkpur",984);
+        //     document.writeln(person.displayDetail());
+
+
+        class person {
+
+            constructor(name) {
+                this.name = name;
+            }
+            getname() {
+                return this.name;
+            }
+
+        }
+        let person1 = new person("Rinju Pokhrel");
+        document.writeln(person1.getname());
+//built in function
+        var now = new Date();
+        document.writeln(now);
+
+        // var str=Math.PI.toString();
+        // var pi=str.substr(0,4); //string manipulation function =substr
+        // document.writeln(pi);
+
+        var str="This  is JavaScript function";
+        var splitted =str.split(" ",3);//string manipulation function =split
+        document.writeln(splitted);
+    </script>
+</body>
+
+</html>
