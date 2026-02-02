@@ -13,7 +13,7 @@ $lname=$_POST["last_name"];
 $email =$_POST["email"];
 $pw =$_POST["password"];
 
-$res=mysqli_query($con ,"insert into users(first_name,last_name,email,password)
+$res=mysqli_query($con ,"insert into user(firstname,lastname,email,password)
 values('$fname','$lname','$email','$pw')");
 if($res) {
     echo "Registration successfully";
