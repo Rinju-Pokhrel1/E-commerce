@@ -1,0 +1,272 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white(187, 184, 4);
+}
+
+#header {
+    height: 50px;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+
+#logo,
+#navbar,
+#login_reg_panel {
+    display: inline-block;
+}
+
+#navbar {
+    margin-top: 7px;
+    margin-left: 100px;
+}
+
+#logo,
+#navbar {
+    float: left;
+}
+
+#navbar a:hover {
+    background-color: rgb(60, 222, 222);
+    color: black
+}
+
+#logo img {
+    height: 50px;
+    width: 40px;
+}
+
+#login_reg_panel a,
+#navbar a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#login_reg_panel {
+    float: right;
+}
+
+.container {
+    height: 500px;
+    background-color: aliceblue;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#register_form {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#register_btn {
+    padding: 10px;
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+#register_form label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+#login_form {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#login_btn {
+    padding: 10px;
+    background-color: darkgray;
+    cursor: pointer;
+    /* margin-top: 10px;
+    margin-left: 50%; */
+}
+
+#login_form label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* 
+#login_form label,
+input {
+    margin-left: 10px;
+    margin-bottom: 4px;
+} */
+
+/* .product_container {
+    align-items: center;
+    width: 96%;
+    height: 350px;
+    border: 2px solid rgb(red, green, blue);
+    border-radius: 16px;
+} */
+
+/* .product_container {
+    width: 96%;
+    height: 350px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid rgb(0, 140, 255);
+    border-radius: 16px;
+    background-color: #f4fbff; */
+/* } */
+.product_container {
+    width: 96%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px;
+    /* border: 1px solid rgb(0, 140, 255); */
+    border-radius: 16px;
+    background-color: #f4fbff;
+    flex-wrap: wrap;
+}
+
+
+.product {
+    margin-left: 10px;
+    height: 320px;
+    width: 200px;
+    background-color: rgb(200, 232, 241);
+    border-radius: 10px;
+    left: 20%;
+    margin-top: 15px;
+    display: inline-block;
+    border: 1px solid gray;
+    box-shadow: 10px 10px gray;
+}
+
+.productImg {
+    height: 200px;
+    width: 200px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.product:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product span,
+.product p,
+.add_to_cart {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.product p {
+    font-size: 20px;
+    ;
+
+}
+
+
+.cart {
+    background-color: red;
+    width: 50px;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.cart img {
+    height: 50px;
+}
+
+#logo {
+    height: 50px;
+    width: 40px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f4fbff;
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid #008cff;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: #008cff;
+    color: white;
+}
+
+.cart-table input {
+    width: 60px;
+    padding: 5px;
+}
+
+.add_to_cart_btn {
+    padding: 8px 14px;
+    background-color: pink;
+    cursor: pointer;
+    margin: 5px auto;
+    display: block;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+.remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+}
+
+.cart-container {
+    max-width: 400px;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.cart-details {
+    margin-left: 10px;
+}
+
+.cart-summary {
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
