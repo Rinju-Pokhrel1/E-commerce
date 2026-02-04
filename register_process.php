@@ -1,3 +1,4 @@
+<!-- 10 marks imp qn  -->
 <?php
 $host ="localhost";
 $user ="root";
@@ -11,7 +12,8 @@ if(!$con) {
 $fname=$_POST["first_name"];
 $lname=$_POST["last_name"];
 $email =$_POST["email"];
-$pw =$_POST["password"];
+
+$pw =password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 $res=mysqli_query($con ,"insert into user(firstname,lastname,email,password)
 values('$fname','$lname','$email','$pw')");
