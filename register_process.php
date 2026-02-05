@@ -23,4 +23,5 @@ if($res) {
 else{
     echo "Registration failed";
 }
+
 ?>
