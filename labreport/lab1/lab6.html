@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Layout with Navbar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+  
+        .header {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+      
+        .navbar {
+            background-color: pink;
+            color: black;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+
+        .footer {
+            background-color: gray;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        
+        .container {
+            display: flex;
+            min-height: 400px; 
+        }
+
+        .left {
+            background-color: lightgray;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .center {
+            background-color: #c6ff00; 
+            flex: 1;
+            padding: 20px;
+        }
+
+        .right {
+            background-color: lightblue;
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Header
+    </div>
+
+    <div class="navbar">
+        Navigation Bar
+    </div>
+
+    <div class="container">
+        <div class="left">
+            Left Sidebar
+        </div>
+        <div class="center">
+            Main Content
+        </div>
+        <div class="right">
+            Right Content
+        </div>
+    </div>
+
+    <div class="footer">
+        Footer
+    </div>
+
+</body>
+</html>

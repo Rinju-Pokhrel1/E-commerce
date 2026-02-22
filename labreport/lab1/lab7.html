@@ -1,0 +1,25 @@
+<!-- 7. Write HTML code to divide web page into 3 frames 20% on left to
+show contents of pages, 60% in center to show body of page,
+remaining on right to show highlights. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-Frame Web Page Layout</title>
+</head>
+<frameset cols="20%,60%,20%">
+    <frame src="content.html" name="leftFrame" title="Content Frame">
+        <frame src="body.html" name="centerFrame" title="Body frame">
+            <frame src="highlights.html" name="rightFrame" title="Highlights frame  ">
+</frameset>
+<noframes>
+
+    <body>
+        <p>Your browser does not support frames. Please update your browser to view this content.</p>
+    </body>
+</noframes>
+
+</html>

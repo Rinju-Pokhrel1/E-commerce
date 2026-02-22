@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of CSS</title>
+
+    <!-- Internal CSS (Embedded CSS) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p.internal {
+            color: blue;
+            font-weight: bold;
+        }
+
+        div.box {
+            width: 200px;
+            height: 100px;
+            background-color: #ffcc00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">   
+</head>
+<body>
+
+    <h1>Demonstration of CSS Types</h1>
+
+    <!-- Inline CSS -->
+    <p style="color: red; font-size: 20px;">
+        This paragraph uses <strong>inline CSS</strong>.
+    </p>
+
+    <!-- Internal CSS -->
+    <p class="internal">
+        This paragraph uses <strong>internal CSS</strong> (embedded in &lt;style&gt; tag).
+    </p>
+
+    <!-- External CSS -->
+    <div class="external-box">
+        This box uses <strong>external CSS</strong> (from styles.css file)
+    </div>
+
+</body>
+</html>
