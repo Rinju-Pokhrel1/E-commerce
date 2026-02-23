@@ -1,0 +1,49 @@
+<!-- 5) Demonstrate the form validation using javascript (eg: user registration
+form). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <h1>User Registration Form</h1>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Register">
+    </form>
+
+  <script>
+   function validateForm() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (username == "") {
+            alert("Username must be filled out");
+            return false;
+        }
+        if (email == "") {
+            alert("Email must be filled out");
+            return false;
+        }
+        if (password == "") {
+            alert("Password must be filled out");
+            return false;
+        }
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters long");
+            return false;
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- 6) Write a program to demonstrate the use of Array and Foreach loop in
+javascript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Foreach Loop Example
+
+    </title>
+</head>
+<body>
+    <h1>Array and For each loop Example</h1>
+    <button onclick="displayFruits()">Display Fruits</button>
+    <script> 
+  function displayFruits() {
+        var fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+        var fruitList = "Fruits:\n";
+        fruits.forEach(function(fruit) {
+            fruitList += fruit + "\n";
+        });
+        console.log(fruits);
+    }
+
+    </script>
+</body>
+</html>
