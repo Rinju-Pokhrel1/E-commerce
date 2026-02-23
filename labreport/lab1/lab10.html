@@ -1,0 +1,61 @@
+<!-- 10. Write HTML & CSS code to create registration form into web
+page. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+    font-family: Arial;
+    background:#f2f2f2;
+}
+form{
+    width:300px;
+    margin:40px auto;
+    padding:20px;
+    background:#fff;
+}
+input{
+    width:100%;
+    padding:6px;
+}
+input[type="radio"]{
+    width:auto;
+}
+input[type="submit"]{
+    background:green;
+    color:white;
+    border:none;
+    padding:8px;
+}
+    </style>
+</head>
+<body>
+    
+      <h1>Registration Form</h1>
+
+    <form method="post" action="">
+        <label>Name:</label>
+        <input type="text" name="name">
+
+        <label>Email:</label>
+        <input type="email" name="email">
+
+        <label>Password:</label>
+        <input type="password" name="password">
+
+        <label>Gender:</label>
+        <div class="gender">
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
