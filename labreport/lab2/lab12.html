@@ -1,0 +1,38 @@
+<!-- 12) Create a simple image slider with next and previous buttons. Clicking
+these buttons should cycle through a series of images. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+</head>
+<body>
+    <h1>Simple Image Slider</h1>
+    <div id="slider" style="width:300px; height:200px;
+        overflow:hidden; position:relative;">
+        <img src="image1.jpeg" alt="Image 1" style="width:100%; height:100%; position:absolute; top:0; left:0;">
+        <img src="image2.jpg" alt="Image 2" style="width:100%; height:100%; position:absolute; top:0; left:0; display:none;">
+        <img src="image3.jpg" alt="Image 3" style="width:100%; height:100%; position:absolute; top:0; left:0; display:none;">
+    </div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js
+"></script>
+    <script>
+       let currentIndex = 0;
+        const images =document.querySelectorAll('#slider img');
+        $('#next').click(function() {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.display = 'block';
+        });
+        $('#prev').click(function() {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex - 1 + images.length) % images.length;  
+            images[currentIndex].style.display = 'block';   
+        }); 
+        
+    </script>
+</body>
+</html>

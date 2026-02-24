@@ -1,0 +1,28 @@
+<!-- 10) Create a button that loads content from an external file (data.html) into
+a <div> on the page using AJAX. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AJAX Content Loader</title>
+    </head>
+    <body>
+        <h1>AJAX Content Loader Example</h1>
+        <button id="loadContent">Load Content</button>
+        <div id="content"></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {  
+                $('#loadContent').click(function() {
+                    $('#content').load('data.html',function(response, status, xhr) {
+                        if (status == "error") {
+                            $('#content').text("An error occurred: " + xhr.status + " " + xhr.statusText);
+                        }   
+                    });
+                });
+            });
+        </script>
+    </body>
+    </html>
