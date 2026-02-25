@@ -1,0 +1,73 @@
+<!-- 3) Write a valid xml to validate following details.
+a. Validate record of books with (name,author,pageno,price)
+b. Name have first name, middle name and last name.
+c. Author can be multiple
+d. And highest price limit is 1000.
+e. Book have isbn as an attribute -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Validation</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .book {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Book Validation</h1>
+    <button onclick="loadxml()">Load Book Data</button>
+    <div id="book-data"></div>
+    <script>
+        function loadxml(){
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "lab3.xml", true);
+            xhr.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    const xmlDoc = this.responseXML;
+                    const books = xmlDoc.getElementsByTagName("book");
+                    let output = "";
+                    for (let i = 0; i < books.length; i++) {
+                        const name = books[i].getElementsByTagName("name")[0].childNodes
+                            [0].nodeValue;
+                        const authors = books[i].getElementsByTagName("author");
+                        let authorList = "";
+                        for (let j = 0; j < authors.length; j++) {
+                            authorList += authors[j].childNodes[0].nodeValue + (j < authors.length - 1 ? ", " : "");
+                        }
+                        const pageno = books[i].getElementsByTagName("pageno")[0].              
+                            childNodes[0].nodeValue;
+                        const price = books[i].getElementsByTagName("price")[0].childNodes
+                            [0].nodeValue;
+                        const isbn = books[i].getAttribute("isbn");
+                        output += `<div class="book">
+                                    <h2>Name: ${name}</h2>  
+                                    <p><strong>Author(s):</strong> ${authorList}</p>
+                                    <p><strong>Page No:</strong> ${pageno}</p>
+                                        <p><strong>Price:</strong> ${price}</p>
+                                    <p><strong>ISBN:</strong> ${isbn}</p>
+                                </div>`;
+                    }
+                    document.getElementById("book-data").innerHTML = output;
+                }
+                else if (this.readyState === 4) {
+                    console.error("Failed to load XML file");
+                }   
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!-- 2) Write an XML file, which will display the Employee Information. It should
+include the following:
+Name
+Address
+Phone
+Designation
+Salary -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Information </h1>
+    <button onclick="loadxml()">Load Employee Data</button>
+    <div id="employee-data"></div>
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Designation</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody id="employee-table-body">
+    </tbody>
+</table>
+    <script>
+        function loadxml(){
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "lab2.xml", true);
+            xhr.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    const xmlDoc = this.responseXML;
+                    const employees = xmlDoc.getElementsByTagName("employee");
+                    let tableBody = "";
+                    for (let i = 0; i < employees.length; i++) {
+                        const name = employees[i].getElementsByTagName("name")[0].textContent;
+                        const address = employees[i].getElementsByTagName("address")[0].textContent;
+                        const phone = employees[i].getElementsByTagName("phone")[0].textContent ;
+                        const designation = employees[i].getElementsByTagName("designation")[0].textContent;
+                        const salary = employees[i].getElementsByTagName("salary")[0].textContent;
+                        tableBody += `<tr>
+                                        <td>${name}</td>
+                                        <td>${address}</td>
+                                        <td>${phone}</td>
+                                        <td>${designation}</td> 
+                                        <td>${salary}</td>
+                                    </tr>`;
+                    }
+                    document.getElementById("employee-table-body").innerHTML = tableBody;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

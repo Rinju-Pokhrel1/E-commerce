@@ -1,0 +1,41 @@
+<!-- 3) Write a valid xml to validate following details.
+a. Validate record of books with (name,author,pageno,price)
+b. Name have first name, middle name and last name.
+c. Author can be multiple
+d. And highest price limit is 1000.
+e. Book have isbn as an attribute -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books [
+    <!ELEMENT books (book+)>
+    <!ELEMENT book (name, author, pageno, price)>
+    <!ATTLIST book isbn CDATA #REQUIRED>
+    <!ELEMENT name (firstname, middlename?, lastname)>                                                                                          
+    <!ELEMENT firstname (#PCDATA)>
+    <!ELEMENT middlename (#PCDATA)>
+    <!ELEMENT lastname (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT pageno (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>  
+]>
+<books>
+    <book isbn="978-12345-678-9">
+        <name>
+            <firstname>John</firstname>
+            <middlename>Michael</middlename>
+            <lastname>Doe</lastname>
+        </name>
+        <author>John Doe</author>
+        <author>Jane Smith</author>
+        <pageno>350</pageno>
+        <price>29.99</price>
+    </book>
+    <book isbn="978-98765-432-1">
+        <name>
+            <firstname>Emily</firstname>                    
+            <lastname>Clark</lastname>
+        </name>     
+        <author>Emily Clark</author>
+        <pageno>200</pageno>
+        <price>15.50</price>
+    </book>
+</books>

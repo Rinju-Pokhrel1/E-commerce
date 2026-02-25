@@ -1,0 +1,93 @@
+<!-- 1) Write an XML file which will display the Book information
+
+Title
+Author
+ISBN
+Publisher
+Edition
+Price -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+    <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>  
+</head>
+<body>
+    <h1>Book Information</h1>
+   <button onclick="loadxml()">Load Book Data</button>
+    <div id="book-data"></div>  
+    <table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Publisher</th>
+            <th>Edition</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody id="book-table-body">
+    </tbody>    
+    </table>
+    
+    <script>
+        function loadxml(){
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "lab1.xml", true);
+            xhr.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    const xmlDoc = this.responseXML;
+                    const books = xmlDoc.getElementsByTagName("book");
+                    
+                    let tbody = document.getElementById("book-table-body");
+                    tbody.innerHTML = "";
+                    for (let i = 0; i < books.length; i++) {
+                        const title = books[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+                        const author = books[i].getElementsByTagName("author")[0].childNodes[0].nodeValue;
+                        const isbn = books[i].getElementsByTagName("isbn")[0].childNodes[0].nodeValue;
+                        const publisher = books[i].getElementsByTagName("publisher")[0].childNodes[0].nodeValue;
+                        const edition = books[i].getElementsByTagName("edition")[0].childNodes[0].nodeValue;
+                        const price = books[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+                        tbody.innerHTML += `<tr>
+                                            <td>${title}</td>
+                                            <td>${author}</td>
+                                            <td>${isbn}</td>
+                                            <td>${publisher}</td>
+                                            <td>${edition}</td>
+                                            <td>${price}</td>
+                                        </tr>`;    
+        }
+        }
+   else if (this.readyState === 4) {
+        console.error("Failed to load XML file");
+    }
+};
+xhr.send();
+        }
+    </script>
+</body>
+</html>

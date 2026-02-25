@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <name>Ramesh Thapa</name>
+        <address>Kathmandu, Nepal</address>
+        <phone>9841234567</phone>
+        <designation>Software Engineer</designation>
+        <salary>$1200</salary>
+    </employee>
+    <employee>
+        <name>Sita Shrestha</name>
+        <address>Pokhara, Nepal</address>
+        <phone>9857654321</phone>
+        <designation>Project Manager</designation>
+        <salary>$2000</salary>
+    </employee>
+    <employee>
+        <name>Rajesh Adhikari</name>
+        <address>Lalitpur, Nepal</address>
+        <phone>9861122334</phone>
+        <designation>HR Executive</designation>
+        <salary>$900</salary>
+    </employee>
+    <employee>
+        <name>Gita Koirala</name>
+        <address>Bhaktapur, Nepal</address>
+        <phone>9812345678</phone>
+        <designation>Accountant</designation>
+        <salary>$1100</salary>
+    </employee>
+    <employee>
+        <name>Sundar Lama</name>
+        <address>Biratnagar, Nepal</address>
+        <phone>9809988776</phone>
+        <designation>Marketing Head</designation>
+        <salary>$1500</salary>
+    </employee>
+</employees>

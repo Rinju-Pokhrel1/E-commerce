@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books>
+    <book>
+        <title>Palpasa Cafe</title>
+        <author>Sudarshan Fakir</author>
+        <isbn>978-9937-2-0456-1</isbn>
+        <publisher>Rato Bangala</publisher>
+        <edition>1st</edition>
+        <price>$10.99</price>
+    </book>
+    <book>
+        <title>Shirishko Phool</title>
+        <author>Parashuram</author>
+        <isbn>978-99933-0-123-4</isbn>
+        <publisher>Ratna Pustak Bhandar</publisher>
+        <edition>1st</edition>
+        <price>$7.19</price>
+    </book>
+</books>
