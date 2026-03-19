@@ -1,0 +1,29 @@
+contacts {
+    display: block;
+    padding: 20px;
+    font-family: "Times New Roman", serif;
+}
+
+person {
+    display: block;
+    margin-bottom: 30px;
+}
+
+name {
+    display: block;
+    color: #ff0000; /* Red */
+    font-size: 28px;
+    margin-bottom: 2px;
+}
+
+address, city, phone {
+    display: block;
+    color: #2e7d32; /* Green */
+    font-size: 18px;
+}
+
+email {
+    display: block;
+    color: #0000ff; /* Blue */
+    font-size: 18px;
+}

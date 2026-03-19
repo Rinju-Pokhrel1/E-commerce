@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lab5.xsl"?>
+<playlist>
+    <song>
+        <name>Imagine</name>
+        <singer>John Lennon</singer>
+        <composedby>John Lennon</composedby>
+        <length>3:03</length>
+    </song>
+    <song>
+        <name>Bohemian Rhapsody</name>
+        <singer>Queen</singer>
+        <composedby>Freddie Mercury</composedby>
+        <length>5:55</length>
+    </song>
+    <song>
+        <name>Shape of You</name>
+        <singer>Ed Sheeran</singer>
+        <composedby>Ed Sheeran</composedby>
+        <length>3:53</length>
+    </song>
+    <song>
+        <name>Resham Filili</name>
+        <singer>Kali Prasad Baskota</singer>
+        <composedby>Kali Prasad Baskota</composedby>
+        <length>4:20</length>
+    </song>
+</playlist>

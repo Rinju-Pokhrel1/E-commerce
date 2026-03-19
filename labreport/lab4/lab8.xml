@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="lab8.xsl"?>
+<!-- Internal DTD starts here -->
+<!DOCTYPE library [
+    <!ELEMENT library (book+)>
+    <!ELEMENT book (title, author, year, price)>
+    <!ATTLIST book id ID #REQUIRED>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+]>
+<!-- Internal DTD ends here -->
+
+<library>
+    <book id="b001">
+        <title>Web Technology</title>
+        <author>Rinju Pokhrel</author>
+        <year>2024</year>
+        <price>850</price>
+    </book>
+    <book id="b002">
+        <title>XML Programming</title>
+        <author>John Doe</author>
+        <year>2023</year>
+        <price>1200</price>
+    </book>
+</library>
