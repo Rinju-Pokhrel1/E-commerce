@@ -1,4 +1,4 @@
-# eStore - iPhone Online Shop
+# eStore - iPhone Online Shop(lab)
 
 ![Website](https://img.shields.io/badge/Website-eStore-blue) ![HTML](https://img.shields.io/badge/HTML5-orange) ![CSS](https://img.shields.io/badge/CSS3-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
 
